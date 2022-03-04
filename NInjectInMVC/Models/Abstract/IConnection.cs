@@ -1,6 +1,6 @@
 ﻿namespace NInjectInMVC.Models.Abstract
 {
-    public interface IConnectionString
+    public interface IConnection
     {
         string GetConnectionString();
     }

@@ -141,11 +141,18 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Injection.cs" />
-    <Compile Include="Models\Abstract\IConnectionString.cs" />
+    <Compile Include="InjectionResolver.cs" />
+    <Compile Include="Models\Abstract\IConnection.cs" />
+    <Compile Include="Models\Abstract\ICustomer.cs" />
+    <Compile Include="Models\Abstract\IData.cs" />
     <Compile Include="Models\Abstract\IEmployee.cs" />
     <Compile Include="Models\ConnectionDTO.cs" />
-    <Compile Include="Models\Entity\ConnectionString.cs" />
+    <Compile Include="Models\Entity\Connection.cs" />
+    <Compile Include="Models\Entity\Customer.cs" />
+    <Compile Include="Models\Entity\DbData.cs" />
     <Compile Include="Models\Entity\Employee.cs" />
+    <Compile Include="Models\Entity\FileData.cs" />
+    <Compile Include="Models\Entity\Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

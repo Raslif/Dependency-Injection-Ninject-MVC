@@ -36,17 +36,18 @@ namespace NInjectInMVC.App_Start
 
         private static IKernel CreateKernel()
         {
-            var kernel = new StandardKernel();
+            var standardKernal = new StandardKernel();
             try
             {
-                kernel.Load(new Injection());
-                kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
-                kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
-                return kernel;
+                standardKernal.Load(new Injection());
+                standardKernal.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
+                standardKernal.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
+                InjectionResolver.Kernel = standardKernal; 
+                return standardKernal;
             }
             catch
             {
-                kernel.Dispose();
+                standardKernal.Dispose();
                 throw;
             }
         }

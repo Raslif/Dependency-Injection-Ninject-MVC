@@ -2,16 +2,16 @@
 
 namespace NInjectInMVC.Models.Entity
 {
-    public class ConnectionString : IConnectionString
+    public class Connection : IConnection
     {
         private readonly string _connectionString = null;
         private readonly ConnectionDTO _connectionDTO = null;
-        public ConnectionString(string connectionString, string test, string data)
+        public Connection(string connectionString, string test, string data)
         {
             _connectionString = connectionString;
         }
 
-        public ConnectionString(string connectionString, ConnectionDTO connectionDTO)
+        public Connection(string connectionString, ConnectionDTO connectionDTO)
         {
             _connectionDTO = connectionDTO;
             _connectionString = connectionString;
