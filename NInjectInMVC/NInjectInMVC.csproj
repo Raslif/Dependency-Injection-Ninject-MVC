@@ -141,7 +141,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Injection.cs" />
+    <Compile Include="Models\Abstract\IConnectionString.cs" />
     <Compile Include="Models\Abstract\IEmployee.cs" />
+    <Compile Include="Models\ConnectionDTO.cs" />
+    <Compile Include="Models\Entity\ConnectionString.cs" />
     <Compile Include="Models\Entity\Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
